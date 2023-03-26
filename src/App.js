@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Card from "./components/Card";
+import List from "./components/List";
+import TypeMe from "./components/TypeMe";
+import MyForm from "./components/MyForm";
+  function App(){
+      const user = {
+      name: 'John Doe',
+      job: 'Engineer',
+      hobby: 'Listening to music',
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+      <Card user={user} />
+      </div>
+      <List />
+      <TypeMe /> 
+      <br />
+      <div className="Form">
+        <MyForm />
+      </div>
     </div>
   );
+    
 }
-
-export default App;
+  
+export default App
